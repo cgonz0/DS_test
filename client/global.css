@@ -1,0 +1,181 @@
+/** @import must precede all other statements */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /**
+   * Tailwind CSS theme
+   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
+   * A different format will require also updating the theme in tailwind.config.ts.
+  */
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 224 71% 4%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 224 71% 4%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 71% 4%;
+
+    --primary: 258 90% 66%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 96%;
+    --secondary-foreground: 224 71% 4%;
+
+    --muted: 220 14% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 260 100% 96%;
+    --accent-foreground: 224 71% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 258 90% 66%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 258 90% 66%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 258 90% 66%;
+
+    --button-text-primary: 251 252 253;
+    --button-text-primary-inverse: 29 32 37;
+    --button-text-disabled: 149 160 172;
+    --button-text-primary-inverse-hover: 64 70 78;
+
+    /* SmartKit token fallbacks (light) */
+    --sk-color-gray600: #676f79;
+    --sk-color-turquoise500: #32bdcd;
+    --sk-alias-primary: #1d2025;
+    --sk-alias-border: #bcc5cf;
+    --sk-alias-textlabel: #676f79;
+
+    /* Banner alias muted background fallbacks (light) */
+    --sk-alias-infomutedbackground: #d9ebfc;
+    --sk-alias-successmutedbackground: #e8fce8;
+    --sk-alias-warningmutedbackground: #fae5c6;
+    --sk-alias-errormutedbackground: #fce8e9;
+    --sk-alias-pinkmutedbackground: #f8dee6;
+    --sk-alias-lightpurplemutedbackground: #e5ddf9;
+    --sk-alias-purplemutedbackground: #f3e9f6;
+    --sk-alias-deeppurplemutedbackground: #e6e1f3;
+    --sk-alias-indigomutedbackground: #e0e2f1;
+    --sk-alias-lightbluemutedbackground: #def0fc;
+    --sk-alias-bluemutedbackground: #e2eefc;
+    --sk-alias-turquoisemutedbackground: #d6f2f5;
+    --sk-alias-tealmutedbackground: #e8f3f2;
+    --sk-alias-lightgreenmutedbackground: #f0f6e8;
+    --sk-alias-greenmutedbackground: #e3f0e1;
+    --sk-alias-limemutedbackground: #f8f9e4;
+    --sk-alias-yellowmutedbackground: #ffffcc;
+    --sk-alias-ambermutedbackground: #fdf4da;
+    --sk-alias-deeporangemutedbackground: #ffe4cc;
+    --sk-alias-orangemutedbackground: #ffe4cc;
+    --sk-alias-brownmutedbackground: #f0ecea;
+    --sk-alias-slatemutedbackground: #e9effb;
+  }
+
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 4%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 258 100% 76%;
+    --primary-foreground: 240 10% 4%;
+
+    --secondary: 240 6% 15%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 6% 15%;
+    --muted-foreground: 240 5% 65%;
+
+    --accent: 240 6% 15%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 6% 15%;
+    --input: 240 6% 15%;
+    --ring: 258 100% 76%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 258 100% 76%;
+    --sidebar-primary-foreground: 0 0% 0%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 258 100% 76%;
+
+    --button-text-primary: 251 252 253;
+    --button-text-primary-inverse: 29 32 37;
+    --button-text-disabled: 149 160 172;
+    --button-text-primary-inverse-hover: 64 70 78;
+
+    /* SmartKit token fallbacks (dark) */
+    --sk-color-gray600: #676f79;
+    --sk-color-turquoise500: #32bdcd;
+    --sk-alias-primary: #fbfcfd;
+    --sk-alias-border: #676f79;
+    --sk-alias-textlabel: #bcc5cf;
+
+    /* Banner alias muted background fallbacks (dark) */
+    --sk-alias-infomutedbackground: #003966;
+    --sk-alias-successmutedbackground: #034516;
+    --sk-alias-warningmutedbackground: #663500;
+    --sk-alias-errormutedbackground: #710513;
+    --sk-alias-pinkmutedbackground: #b82754;
+    --sk-alias-lightpurplemutedbackground: #4f22bf;
+    --sk-alias-purplemutedbackground: #8c42a1;
+    --sk-alias-deeppurplemutedbackground: #5d3f9d;
+    --sk-alias-indigomutedbackground: #404b95;
+    --sk-alias-lightbluemutedbackground: #005a97;
+    --sk-alias-bluemutedbackground: #0154af;
+    --sk-alias-turquoisemutedbackground: #0a2629;
+    --sk-alias-tealmutedbackground: #1f6159;
+    --sk-alias-lightgreenmutedbackground: #3c6106;
+    --sk-alias-greenmutedbackground: #539349;
+    --sk-alias-limemutedbackground: #525900;
+    --sk-alias-yellowmutedbackground: #808000;
+    --sk-alias-ambermutedbackground: #765800;
+    --sk-alias-deeporangemutedbackground: #cc5f00;
+    --sk-alias-orangemutedbackground: #994800;
+    --sk-alias-brownmutedbackground: #7c655c;
+    --sk-alias-slatemutedbackground: #313845;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .banner-surface {
+    border: none;
+    border-radius: var(--radius);
+  }
+}
