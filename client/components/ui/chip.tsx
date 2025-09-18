@@ -16,7 +16,7 @@ const chipVariants = cva(
       size: {
         small: "h-6 px-3 text-xs",
         medium: "h-10 px-4 text-sm",
-        large: "h-14 px-5 text-base", // 56px height
+        large: "h-14 px-5 text-base rounded-[56px]", // 56px height & radius
       },
     },
     defaultVariants: {
