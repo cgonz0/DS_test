@@ -2,7 +2,7 @@ import React from "react";
 import { Bell, Wifi, CheckCircle, MoreHorizontal, Grid, Home, Key, Users, Clock } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Chip } from "@/components/ui/chip";
 import { Banner } from "@/components/ui/banner";
 
 export default function SmartHome() {
