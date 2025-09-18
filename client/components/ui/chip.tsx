@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const chipVariants = cva(
-  "inline-flex items-center font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center gap-2 font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2 rounded-[20px]",
   {
     variants: {
       variant: {
@@ -14,60 +14,20 @@ const chipVariants = cva(
         plain: "bg-[#EDEFF2] text-[#1D2025]",
       },
       size: {
-        small: "text-xs leading-5 rounded-full",
-        medium: "text-sm leading-5 rounded-xl",
-        large: "text-base leading-6 rounded-[56px]",
-      },
-      removable: {
-        true: "",
-        false: "",
+        small: "h-6 px-3 text-xs",
+        medium: "h-10 px-4 text-sm",
+        large: "h-14 px-5 text-base", // 56px height
       },
     },
-    compoundVariants: [
-      // Small size padding variants
-      {
-        size: "small",
-        removable: false,
-        className: "px-5 py-0.5",
-      },
-      {
-        size: "small",
-        removable: true,
-        className: "pl-3 pr-1 py-0.5",
-      },
-      // Medium size padding variants
-      {
-        size: "medium",
-        removable: false,
-        className: "px-5 py-2.5",
-      },
-      {
-        size: "medium",
-        removable: true,
-        className: "pl-4 pr-2 py-2.5",
-      },
-      // Large size padding variants
-      {
-        size: "large",
-        removable: false,
-        className: "px-5 py-4.5",
-      },
-      {
-        size: "large",
-        removable: true,
-        className: "pl-5 pr-2 py-4",
-      },
-    ],
     defaultVariants: {
       variant: "solid",
       size: "medium",
-      removable: false,
     },
   },
 );
 
 const chipCloseVariants = cva(
-  "ml-2 flex-shrink-0 rounded-full transition-colors hover:bg-black/10",
+  "ml-2 flex-shrink-0 inline-flex items-center justify-center rounded-full bg-[#CCD1D8] text-[#40464E] transition-colors hover:bg-[#B8BFC8]",
   {
     variants: {
       size: {
@@ -106,12 +66,9 @@ function Chip({
   };
 
   return (
-    <div className={cn(chipVariants({ variant, size, removable }), className)} {...props}>
+    <div className={cn(chipVariants({ variant, size }), className)} {...props}>
       {leftElement && (
-        <div className={cn(
-          "flex-shrink-0",
-          size === "small" ? "mr-2" : size === "medium" ? "mr-2" : "mr-2"
-        )}>
+        <div className="flex-shrink-0">
           {leftElement}
         </div>
       )}
@@ -123,8 +80,7 @@ function Chip({
           aria-label="Remove"
         >
           <X className={cn(
-            "text-[#CCD1D8]",
-            size === "small" ? "w-4 h-4" : size === "medium" ? "w-5 h-5" : "w-6 h-6"
+            size === "small" ? "w-3 h-3" : size === "medium" ? "w-4 h-4" : "w-5 h-5"
           )} />
         </button>
       )}
