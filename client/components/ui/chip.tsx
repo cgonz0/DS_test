@@ -5,7 +5,7 @@ import { X } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 const chipVariants = cva(
-  "inline-flex items-center font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
+  "inline-flex items-center font-bold transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
       variant: {
@@ -14,14 +14,54 @@ const chipVariants = cva(
         plain: "bg-[#EDEFF2] text-[#1D2025]",
       },
       size: {
-        small: "text-xs h-6 px-3 rounded-full",
-        medium: "text-sm h-10 px-4 rounded-2xl",
-        large: "text-base h-14 px-5 rounded-[56px]",
+        small: "text-xs leading-5 rounded-full",
+        medium: "text-sm leading-5 rounded-xl",
+        large: "text-base leading-6 rounded-[56px]",
+      },
+      removable: {
+        true: "",
+        false: "",
       },
     },
+    compoundVariants: [
+      // Small size padding variants
+      {
+        size: "small",
+        removable: false,
+        className: "px-5 py-0.5",
+      },
+      {
+        size: "small",
+        removable: true,
+        className: "pl-3 pr-1 py-0.5",
+      },
+      // Medium size padding variants
+      {
+        size: "medium",
+        removable: false,
+        className: "px-5 py-2.5",
+      },
+      {
+        size: "medium",
+        removable: true,
+        className: "pl-4 pr-2 py-2.5",
+      },
+      // Large size padding variants
+      {
+        size: "large",
+        removable: false,
+        className: "px-5 py-4.5",
+      },
+      {
+        size: "large",
+        removable: true,
+        className: "pl-5 pr-2 py-4",
+      },
+    ],
     defaultVariants: {
       variant: "solid",
       size: "medium",
+      removable: false,
     },
   },
 );
