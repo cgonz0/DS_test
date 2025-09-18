@@ -99,7 +99,7 @@ export default function SmartHome() {
       <div className="flex-1 px-4 space-y-4 overflow-y-auto">
         {/* Beta Firmware Banner */}
         <Banner
-          variant="warning"
+          variant="slate"
           title="Beta Firmware Available"
           description="Your hub is eligible for beta firmware updates! Get early access to pre-release beta firmware and new features."
           primaryAction={{ label: "Opt in to beta", onClick: () => {} }}
