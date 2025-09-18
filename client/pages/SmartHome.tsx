@@ -169,7 +169,7 @@ export default function SmartHome() {
           <Button variant="solid" size="large" className="w-full h-14 shadow-lg">
             Button
           </Button>
-          <Button variant="plain" size="large" className="w-full rounded-2xl h-14">
+          <Button variant="plain" size="large" className="w-full h-14">
             Button
           </Button>
         </div>
