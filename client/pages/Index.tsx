@@ -384,46 +384,108 @@ export default function Index() {
         {/* Card Showcase */}
         <section>
           <h2 className="text-2xl font-bold mb-6 text-center">Card Component Showcase</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Hub Status</CardTitle>
-                <CardDescription>Current Wi‑Fi and online devices</CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">
-                Connected to HomeWiFi345. All systems nominal.
-              </CardContent>
-              <CardFooter>
-                <Button size="small" variant="outline">Details</Button>
-              </CardFooter>
-            </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Living Room</CardTitle>
-                <CardDescription>4 devices</CardDescription>
-              </CardHeader>
-              <CardContent className="flex items-center gap-2">
-                <Chip>Online</Chip>
-                <Chip variant="outline">Auto</Chip>
-              </CardContent>
-              <CardFooter>
-                <Button size="small">Open</Button>
-              </CardFooter>
-            </Card>
+          {/* New Card Variants */}
+          <div className="space-y-6 mb-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Card Style Variants</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Float Style */}
+                <Card style="float" className="min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <h4 className="font-bold text-[#005A97] mb-2">Float Card</h4>
+                      <p className="text-sm text-[#005A97]">Card with shadow</p>
+                    </div>
+                  </CardContent>
+                </Card>
 
-            <Card>
-              <CardHeader>
-                <CardTitle className="text-lg">Energy Usage</CardTitle>
-                <CardDescription>Today vs yesterday</CardDescription>
-              </CardHeader>
-              <CardContent className="text-sm text-muted-foreground">
-                Preview placeholder — integrate charts later with Chart components.
-              </CardContent>
-              <CardFooter>
-                <Button size="small" variant="plain">Learn more</Button>
-              </CardFooter>
-            </Card>
+                {/* Border Style */}
+                <Card style="border" className="min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <h4 className="font-bold text-[#005A97] mb-2">Border Card</h4>
+                      <p className="text-sm text-[#005A97]">Card with border</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Default Style */}
+                <Card style="default" className="min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <h4 className="font-bold text-[#005A97] mb-2">Default Card</h4>
+                      <p className="text-sm text-[#005A97]">Standard card</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Card Slot Variants</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Slot Card */}
+                <Card variant="slot" className="min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <span className="text-[#005A97] font-bold text-sm">Drop your custom component here</span>
+                  </CardContent>
+                </Card>
+
+                {/* Filled Slot Card */}
+                <Card variant="filled" className="min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <span className="text-[#005A97] font-bold text-sm">Drop your custom component here</span>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          {/* Traditional Card Usage */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Traditional Card Layout</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="flex flex-col">
+                <CardHeader>
+                  <CardTitle className="text-lg">Hub Status</CardTitle>
+                  <CardDescription>Current Wi‑Fi and online devices</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground flex-1">
+                  Connected to HomeWiFi345. All systems nominal.
+                </CardContent>
+                <CardFooter>
+                  <Button size="small" variant="outline">Details</Button>
+                </CardFooter>
+              </Card>
+
+              <Card className="flex flex-col">
+                <CardHeader>
+                  <CardTitle className="text-lg">Living Room</CardTitle>
+                  <CardDescription>4 devices</CardDescription>
+                </CardHeader>
+                <CardContent className="flex items-center gap-2 flex-1">
+                  <Chip>Online</Chip>
+                  <Chip variant="outline">Auto</Chip>
+                </CardContent>
+                <CardFooter>
+                  <Button size="small">Open</Button>
+                </CardFooter>
+              </Card>
+
+              <Card className="flex flex-col">
+                <CardHeader>
+                  <CardTitle className="text-lg">Energy Usage</CardTitle>
+                  <CardDescription>Today vs yesterday</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground flex-1">
+                  Preview placeholder — integrate charts later with Chart components.
+                </CardContent>
+                <CardFooter>
+                  <Button size="small" variant="plain">Learn more</Button>
+                </CardFooter>
+              </Card>
+            </div>
           </div>
         </section>
 
