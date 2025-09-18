@@ -451,6 +451,41 @@ export default function Index() {
               </div>
             </div>
 
+            {/* With Icons */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Chips with Icons</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip
+                  variant="solid"
+                  leftElement={
+                    <div className="w-5 h-5 rounded-full bg-[#EDEFF2] flex items-center justify-center">
+                      <span className="text-[#1D2025] text-xs font-bold">A</span>
+                    </div>
+                  }
+                >
+                  With Badge
+                </Chip>
+                <Chip
+                  variant="outline"
+                  leftElement={
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  }
+                >
+                  With Icon
+                </Chip>
+                <Chip
+                  variant="plain"
+                  leftElement={
+                    <div className="w-5 h-5 rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                  }
+                >
+                  With Avatar
+                </Chip>
+              </div>
+            </div>
+
             {/* Removable */}
             <div>
               <h3 className="text-lg font-semibold mb-3">Removable Chips</h3>
