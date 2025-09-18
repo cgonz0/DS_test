@@ -10,7 +10,7 @@ const cardVariants = cva(
       style: {
         float: "shadow-xx-sm rounded-lg bg-white",
         border: "border rounded-lg bg-white",
-        default: "rounded-lg bg-white shadow-sm",
+        default: "rounded-lg bg-white shadow-xx-sm",
       },
       padding: {
         yes: "p-4",
