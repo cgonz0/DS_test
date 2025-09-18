@@ -570,33 +570,6 @@ export default function Index() {
               </div>
             </div>
 
-            <div>
-              <h3 className="text-lg font-semibold mb-3">Usage Examples</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card style="float" className="min-h-[100px]">
-                  <CardContent className="flex items-center justify-center h-full">
-                    <div className="text-center">
-                      <h4 className="font-bold text-[#005A97] mb-1">Float Card</h4>
-                      <p className="text-xs text-[#005A97]">Uses shadow-xx-sm</p>
-                    </div>
-                  </CardContent>
-                </Card>
-
-                <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center min-h-[100px]">
-                  <div className="text-center">
-                    <h4 className="font-bold text-gray-700 mb-1">Custom Element</h4>
-                    <p className="text-xs text-gray-500">Uses shadow-md</p>
-                  </div>
-                </div>
-
-                <div className="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center min-h-[100px]">
-                  <div className="text-center">
-                    <h4 className="font-bold text-gray-700 mb-1">Elevated Element</h4>
-                    <p className="text-xs text-gray-500">Uses shadow-lg</p>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
