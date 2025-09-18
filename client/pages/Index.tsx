@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Banner } from "@/components/ui/banner";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
