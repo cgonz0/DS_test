@@ -12,7 +12,7 @@ export default function Index() {
       <div className="pointer-events-none absolute -bottom-28 -right-28 h-72 w-72 rounded-full bg-indigo-400/30 blur-3xl dark:bg-indigo-600/20" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-400/20 blur-3xl dark:bg-purple-700/20" />
 
-      <main className="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-12">
+      <main className="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-12 space-y-16">
         <div className="text-center mb-12">
           <h1 className="bg-gradient-to-r from-violet-600 via-fuchsia-500 to-indigo-600 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-7xl">
             Hello, world!
@@ -391,7 +391,7 @@ export default function Index() {
               <h3 className="text-lg font-semibold mb-3">Card Style Variants</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {/* Float Style */}
-                <Card style="float" className="min-h-[120px]">
+                <Card style="float" className="rounded-[12px] min-h-[120px]">
                   <CardContent className="flex items-center justify-center h-full">
                     <div className="text-center">
                       <h4 className="font-bold text-[#005A97] mb-2">Float Card</h4>
@@ -401,7 +401,7 @@ export default function Index() {
                 </Card>
 
                 {/* Border Style */}
-                <Card style="border" className="min-h-[120px]">
+                <Card style="border" className="rounded-[12px] min-h-[120px]">
                   <CardContent className="flex items-center justify-center h-full">
                     <div className="text-center">
                       <h4 className="font-bold text-[#005A97] mb-2">Border Card</h4>
@@ -411,7 +411,7 @@ export default function Index() {
                 </Card>
 
                 {/* Default Style */}
-                <Card style="default" className="min-h-[120px]">
+                <Card style="default" className="rounded-[12px] min-h-[120px]">
                   <CardContent className="flex items-center justify-center h-full">
                     <div className="text-center">
                       <h4 className="font-bold text-[#005A97] mb-2">Default Card</h4>
@@ -426,14 +426,14 @@ export default function Index() {
               <h3 className="text-lg font-semibold mb-3">Card Slot Variants</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Slot Card */}
-                <Card variant="slot" className="min-h-[120px]">
+                <Card variant="slot" className="rounded-[12px] min-h-[120px]">
                   <CardContent className="flex items-center justify-center h-full">
                     <span className="text-[#005A97] font-bold text-sm">Drop your custom component here</span>
                   </CardContent>
                 </Card>
 
                 {/* Filled Slot Card */}
-                <Card variant="filled" className="min-h-[120px]">
+                <Card variant="filled" className="rounded-[12px] min-h-[120px]">
                   <CardContent className="flex items-center justify-center h-full">
                     <span className="text-[#005A97] font-bold text-sm">Drop your custom component here</span>
                   </CardContent>
@@ -446,7 +446,7 @@ export default function Index() {
           <div>
             <h3 className="text-lg font-semibold mb-3">Traditional Card Layout</h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="flex flex-col">
+              <Card className="flex flex-col rounded-[12px]">
                 <CardHeader>
                   <CardTitle className="text-lg">Hub Status</CardTitle>
                   <CardDescription>Current Wi‑Fi and online devices</CardDescription>
@@ -459,7 +459,7 @@ export default function Index() {
                 </CardFooter>
               </Card>
 
-              <Card className="flex flex-col">
+              <Card className="flex flex-col rounded-[12px]">
                 <CardHeader>
                   <CardTitle className="text-lg">Living Room</CardTitle>
                   <CardDescription>4 devices</CardDescription>
@@ -473,7 +473,7 @@ export default function Index() {
                 </CardFooter>
               </Card>
 
-              <Card className="flex flex-col">
+              <Card className="flex flex-col rounded-[12px]">
                 <CardHeader>
                   <CardTitle className="text-lg">Energy Usage</CardTitle>
                   <CardDescription>Today vs yesterday</CardDescription>
