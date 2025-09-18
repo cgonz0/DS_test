@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Banner } from "@/components/ui/banner";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Chip } from "@/components/ui/chip";
+import { Link } from "react-router-dom";
 
 export default function Index() {
   return (
@@ -9,7 +12,7 @@ export default function Index() {
       <div className="pointer-events-none absolute -bottom-28 -right-28 h-72 w-72 rounded-full bg-indigo-400/30 blur-3xl dark:bg-indigo-600/20" />
       <div className="pointer-events-none absolute left-1/2 top-1/2 -z-0 h-72 w-72 -translate-x-1/2 -translate-y-1/2 rounded-full bg-purple-400/20 blur-3xl dark:bg-purple-700/20" />
 
-      <main className="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-12">
+      <main className="relative z-10 mx-auto min-h-screen max-w-6xl px-6 py-12 space-y-16">
         <div className="text-center mb-12">
           <h1 className="bg-gradient-to-r from-violet-600 via-fuchsia-500 to-indigo-600 bg-clip-text text-5xl font-extrabold tracking-tight text-transparent sm:text-7xl">
             Hello, world!
@@ -18,6 +21,11 @@ export default function Index() {
             A tiny, modern and production‑ready hello world app with a beautiful
             button component.
           </p>
+          <div className="mt-8">
+            <Button asChild variant="solid">
+              <Link to="/smart-home">View Smart Home Mobile Interface</Link>
+            </Button>
+          </div>
         </div>
 
         {/* Token Boxes */}
@@ -372,6 +380,269 @@ export default function Index() {
             </div>
           </section>
         </div>
+
+        {/* Card Showcase */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6 text-center">Card Component Showcase</h2>
+
+          {/* New Card Variants */}
+          <div className="space-y-6 mb-8">
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Card Style Variants</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {/* Float Style */}
+                <Card style="float" className="rounded-[12px] min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <h4 className="font-bold text-[#005A97] mb-2">Float Card</h4>
+                      <p className="text-sm text-[#005A97]">Card with shadow</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Border Style */}
+                <Card style="border" className="rounded-[12px] min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <h4 className="font-bold text-[#005A97] mb-2">Border Card</h4>
+                      <p className="text-sm text-[#005A97]">Card with border</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Default Style */}
+                <Card style="default" className="rounded-[12px] min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <h4 className="font-bold text-[#005A97] mb-2">Default Card</h4>
+                      <p className="text-sm text-[#005A97]">Standard card</p>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Card Slot Variants</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {/* Slot Card */}
+                <Card variant="slot" className="rounded-[12px] min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <span className="text-[#005A97] font-bold text-sm">Drop your custom component here</span>
+                  </CardContent>
+                </Card>
+
+                {/* Filled Slot Card */}
+                <Card variant="filled" className="rounded-[12px] min-h-[120px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <span className="text-[#005A97] font-bold text-sm">Drop your custom component here</span>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
+          </div>
+
+          {/* Traditional Card Usage */}
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Traditional Card Layout</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <Card className="flex flex-col rounded-[12px]">
+                <CardHeader>
+                  <CardTitle className="text-lg">Hub Status</CardTitle>
+                  <CardDescription>Current Wi‑Fi and online devices</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground flex-1">
+                  Connected to HomeWiFi345. All systems nominal.
+                </CardContent>
+                <CardFooter>
+                  <Button size="small" variant="outline">Details</Button>
+                </CardFooter>
+              </Card>
+
+              <Card className="flex flex-col rounded-[12px]">
+                <CardHeader>
+                  <CardTitle className="text-lg">Living Room</CardTitle>
+                  <CardDescription>4 devices</CardDescription>
+                </CardHeader>
+                <CardContent className="flex items-center gap-2 flex-1">
+                  <Chip>Online</Chip>
+                  <Chip variant="outline">Auto</Chip>
+                </CardContent>
+                <CardFooter>
+                  <Button size="small">Open</Button>
+                </CardFooter>
+              </Card>
+
+              <Card className="flex flex-col rounded-[12px]">
+                <CardHeader>
+                  <CardTitle className="text-lg">Energy Usage</CardTitle>
+                  <CardDescription>Today vs yesterday</CardDescription>
+                </CardHeader>
+                <CardContent className="text-sm text-muted-foreground flex-1">
+                  Preview placeholder — integrate charts later with Chart components.
+                </CardContent>
+                <CardFooter>
+                  <Button size="small" variant="plain">Learn more</Button>
+                </CardFooter>
+              </Card>
+            </div>
+          </div>
+        </section>
+
+        {/* Shadow Tokens Showcase */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6 text-center">Shadow Tokens Showcase</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Elevation Levels</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {/* xx-sm shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-xx-sm mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">1</span>
+                  </div>
+                  <p className="text-sm font-medium">xx-sm</p>
+                  <p className="text-xs text-gray-500">Elevation 1</p>
+                </div>
+
+                {/* xs shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-xs mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">2</span>
+                  </div>
+                  <p className="text-sm font-medium">xs</p>
+                  <p className="text-xs text-gray-500">Elevation 2</p>
+                </div>
+
+                {/* sm shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-sm mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">3</span>
+                  </div>
+                  <p className="text-sm font-medium">sm</p>
+                  <p className="text-xs text-gray-500">Elevation 3</p>
+                </div>
+
+                {/* md shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-md mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">4</span>
+                  </div>
+                  <p className="text-sm font-medium">md</p>
+                  <p className="text-xs text-gray-500">Elevation 4</p>
+                </div>
+
+                {/* lg shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-lg mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">5</span>
+                  </div>
+                  <p className="text-sm font-medium">lg</p>
+                  <p className="text-xs text-gray-500">Elevation 5</p>
+                </div>
+
+                {/* xl shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-xl mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">6</span>
+                  </div>
+                  <p className="text-sm font-medium">xl</p>
+                  <p className="text-xs text-gray-500">Elevation 6</p>
+                </div>
+
+                {/* 2xl shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-2xl mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">7</span>
+                  </div>
+                  <p className="text-sm font-medium">2xl</p>
+                  <p className="text-xs text-gray-500">Elevation 7</p>
+                </div>
+
+                {/* 3xl shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-3xl mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">8</span>
+                  </div>
+                  <p className="text-sm font-medium">3xl</p>
+                  <p className="text-xs text-gray-500">Elevation 8</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
+
+        {/* Chip Showcase */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6 text-center">Chip Component Showcase</h2>
+          <div className="space-y-6">
+            {/* Basic Variants */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Style Variants</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip variant="solid">Solid</Chip>
+                <Chip variant="outline">Outline</Chip>
+                <Chip variant="plain">Plain</Chip>
+              </div>
+            </div>
+
+            {/* Sizes */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Size Variants</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip size="small">Small</Chip>
+                <Chip size="medium">Medium</Chip>
+                <Chip size="large">Large</Chip>
+              </div>
+            </div>
+
+            {/* With Icons */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Chips with Icons</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip
+                  variant="solid"
+                  leftElement={
+                    <div className="w-5 h-5 rounded-full bg-[#EDEFF2] flex items-center justify-center">
+                      <span className="text-[#1D2025] text-xs font-bold">A</span>
+                    </div>
+                  }
+                >
+                  With Badge
+                </Chip>
+                <Chip
+                  variant="outline"
+                  leftElement={
+                    <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  }
+                >
+                  With Icon
+                </Chip>
+                <Chip
+                  variant="plain"
+                  leftElement={
+                    <div className="w-5 h-5 rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500"></div>
+                  }
+                >
+                  With Avatar
+                </Chip>
+              </div>
+            </div>
+
+            {/* Removable */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Removable Chips</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip removable onRemove={() => alert('Chip removed!')}>Removable</Chip>
+                <Chip variant="outline" removable onRemove={() => alert('Chip removed!')}>Outline Removable</Chip>
+                <Chip variant="plain" removable onRemove={() => alert('Chip removed!')}>Plain Removable</Chip>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </div>
   );
