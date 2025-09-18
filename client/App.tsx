@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import Login from "./pages/Login";
+import SmartHome from "./pages/SmartHome";
 
 import { initSmartkitTokens } from "@/lib/smartkit-tokens";
 
