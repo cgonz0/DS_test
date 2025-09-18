@@ -1,5 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Banner } from "@/components/ui/banner";
+import { Card, CardContent, CardFooter, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import { Link } from "react-router-dom";
 
 export default function Index() {
@@ -378,6 +380,63 @@ export default function Index() {
             </div>
           </section>
         </div>
+
+        {/* Card Showcase */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6 text-center">Card Component Showcase</h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Hub Status</CardTitle>
+                <CardDescription>Current Wi‑Fi and online devices</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                Connected to HomeWiFi345. All systems nominal.
+              </CardContent>
+              <CardFooter>
+                <Button size="small" variant="outline">Details</Button>
+              </CardFooter>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Living Room</CardTitle>
+                <CardDescription>4 devices</CardDescription>
+              </CardHeader>
+              <CardContent className="flex items-center gap-2">
+                <Badge>Online</Badge>
+                <Badge variant="secondary">Auto</Badge>
+              </CardContent>
+              <CardFooter>
+                <Button size="small">Open</Button>
+              </CardFooter>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="text-lg">Energy Usage</CardTitle>
+                <CardDescription>Today vs yesterday</CardDescription>
+              </CardHeader>
+              <CardContent className="text-sm text-muted-foreground">
+                Preview placeholder — integrate charts later with Chart components.
+              </CardContent>
+              <CardFooter>
+                <Button size="small" variant="plain">Learn more</Button>
+              </CardFooter>
+            </Card>
+          </div>
+        </section>
+
+        {/* Badge Showcase */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6 text-center">Badge Component Showcase</h2>
+          <div className="flex flex-wrap gap-3 items-center justify-center">
+            <Badge>Default</Badge>
+            <Badge variant="secondary">Secondary</Badge>
+            <Badge variant="destructive">Destructive</Badge>
+            <Badge variant="outline">Outline</Badge>
+          </div>
+        </section>
       </main>
     </div>
   );
