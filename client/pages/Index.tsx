@@ -489,6 +489,117 @@ export default function Index() {
           </div>
         </section>
 
+        {/* Shadow Tokens Showcase */}
+        <section>
+          <h2 className="text-2xl font-bold mb-6 text-center">Shadow Tokens Showcase</h2>
+          <div className="space-y-6">
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Elevation Levels</h3>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+                {/* xx-sm shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-xx-sm mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">1</span>
+                  </div>
+                  <p className="text-sm font-medium">xx-sm</p>
+                  <p className="text-xs text-gray-500">Elevation 1</p>
+                </div>
+
+                {/* xs shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-xs mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">2</span>
+                  </div>
+                  <p className="text-sm font-medium">xs</p>
+                  <p className="text-xs text-gray-500">Elevation 2</p>
+                </div>
+
+                {/* sm shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-sm mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">3</span>
+                  </div>
+                  <p className="text-sm font-medium">sm</p>
+                  <p className="text-xs text-gray-500">Elevation 3</p>
+                </div>
+
+                {/* md shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-md mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">4</span>
+                  </div>
+                  <p className="text-sm font-medium">md</p>
+                  <p className="text-xs text-gray-500">Elevation 4</p>
+                </div>
+
+                {/* lg shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-lg mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">5</span>
+                  </div>
+                  <p className="text-sm font-medium">lg</p>
+                  <p className="text-xs text-gray-500">Elevation 5</p>
+                </div>
+
+                {/* xl shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-xl mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">6</span>
+                  </div>
+                  <p className="text-sm font-medium">xl</p>
+                  <p className="text-xs text-gray-500">Elevation 6</p>
+                </div>
+
+                {/* 2xl shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-2xl mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">7</span>
+                  </div>
+                  <p className="text-sm font-medium">2xl</p>
+                  <p className="text-xs text-gray-500">Elevation 7</p>
+                </div>
+
+                {/* 3xl shadow */}
+                <div className="text-center">
+                  <div className="w-24 h-24 bg-white rounded shadow-3xl mx-auto mb-2 flex items-center justify-center">
+                    <span className="text-xs font-bold text-gray-600">8</span>
+                  </div>
+                  <p className="text-sm font-medium">3xl</p>
+                  <p className="text-xs text-gray-500">Elevation 8</p>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Usage Examples</h3>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card style="float" className="min-h-[100px]">
+                  <CardContent className="flex items-center justify-center h-full">
+                    <div className="text-center">
+                      <h4 className="font-bold text-[#005A97] mb-1">Float Card</h4>
+                      <p className="text-xs text-[#005A97]">Uses shadow-xx-sm</p>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                <div className="bg-white rounded-lg shadow-md p-6 flex items-center justify-center min-h-[100px]">
+                  <div className="text-center">
+                    <h4 className="font-bold text-gray-700 mb-1">Custom Element</h4>
+                    <p className="text-xs text-gray-500">Uses shadow-md</p>
+                  </div>
+                </div>
+
+                <div className="bg-white rounded-lg shadow-lg p-6 flex items-center justify-center min-h-[100px]">
+                  <div className="text-center">
+                    <h4 className="font-bold text-gray-700 mb-1">Elevated Element</h4>
+                    <p className="text-xs text-gray-500">Uses shadow-lg</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Chip Showcase */}
         <section>
           <h2 className="text-2xl font-bold mb-6 text-center">Chip Component Showcase</h2>
