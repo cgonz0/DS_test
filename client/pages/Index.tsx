@@ -19,6 +19,11 @@ export default function Index() {
             A tiny, modern and production‑ready hello world app with a beautiful
             button component.
           </p>
+          <div className="mt-8">
+            <Button asChild variant="solid">
+              <Link to="/smart-home">View Smart Home Mobile Interface</Link>
+            </Button>
+          </div>
         </div>
 
         {/* Token Boxes */}
