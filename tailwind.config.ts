@@ -83,6 +83,16 @@ export default {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        "xx-sm": "0 1px 3px 1px rgba(0, 0, 0, 0.15)",
+        "xs": "0 2px 6px 2px rgba(0, 0, 0, 0.15)",
+        "sm": "0 4px 8px 3px rgba(0, 0, 0, 0.15)",
+        "md": "0 6px 10px 4px rgba(0, 0, 0, 0.15)",
+        "lg": "0 8px 12px 5px rgba(0, 0, 0, 0.15)",
+        "xl": "0 10px 14px 6px rgba(0, 0, 0, 0.15)",
+        "2xl": "0 12px 16px 7px rgba(0, 0, 0, 0.15)",
+        "3xl": "0 14px 18px 8px rgba(0, 0, 0, 0.15)",
+      },
       keyframes: {
         "accordion-down": {
           from: {
