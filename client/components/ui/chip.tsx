@@ -90,15 +90,15 @@ export interface ChipProps
   leftElement?: React.ReactNode;
 }
 
-function Chip({ 
-  className, 
-  variant, 
-  size, 
-  removable = false, 
-  onRemove, 
+function Chip({
+  className,
+  variant,
+  size,
+  removable = false,
+  onRemove,
   leftElement,
   children,
-  ...props 
+  ...props
 }: ChipProps) {
   const handleRemove = (e: React.MouseEvent) => {
     e.stopPropagation();
@@ -106,7 +106,7 @@ function Chip({
   };
 
   return (
-    <div className={cn(chipVariants({ variant, size }), className)} {...props}>
+    <div className={cn(chipVariants({ variant, size, removable }), className)} {...props}>
       {leftElement && (
         <div className={cn(
           "flex-shrink-0",
@@ -115,7 +115,7 @@ function Chip({
           {leftElement}
         </div>
       )}
-      <span className="font-bold leading-none">{children}</span>
+      <span>{children}</span>
       {removable && (
         <button
           onClick={handleRemove}
@@ -124,7 +124,7 @@ function Chip({
         >
           <X className={cn(
             "text-[#CCD1D8]",
-            size === "small" ? "w-3 h-3" : size === "medium" ? "w-4 h-4" : "w-5 h-5"
+            size === "small" ? "w-4 h-4" : size === "medium" ? "w-5 h-5" : "w-6 h-6"
           )} />
         </button>
       )}
