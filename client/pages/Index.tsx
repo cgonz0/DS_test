@@ -404,8 +404,8 @@ export default function Index() {
                 <CardDescription>4 devices</CardDescription>
               </CardHeader>
               <CardContent className="flex items-center gap-2">
-                <Badge>Online</Badge>
-                <Badge variant="secondary">Auto</Badge>
+                <Chip>Online</Chip>
+                <Chip variant="outline">Auto</Chip>
               </CardContent>
               <CardFooter>
                 <Button size="small">Open</Button>
@@ -427,14 +427,39 @@ export default function Index() {
           </div>
         </section>
 
-        {/* Badge Showcase */}
+        {/* Chip Showcase */}
         <section>
-          <h2 className="text-2xl font-bold mb-6 text-center">Badge Component Showcase</h2>
-          <div className="flex flex-wrap gap-3 items-center justify-center">
-            <Badge>Default</Badge>
-            <Badge variant="secondary">Secondary</Badge>
-            <Badge variant="destructive">Destructive</Badge>
-            <Badge variant="outline">Outline</Badge>
+          <h2 className="text-2xl font-bold mb-6 text-center">Chip Component Showcase</h2>
+          <div className="space-y-6">
+            {/* Basic Variants */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Style Variants</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip variant="solid">Solid</Chip>
+                <Chip variant="outline">Outline</Chip>
+                <Chip variant="plain">Plain</Chip>
+              </div>
+            </div>
+
+            {/* Sizes */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Size Variants</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip size="small">Small</Chip>
+                <Chip size="medium">Medium</Chip>
+                <Chip size="large">Large</Chip>
+              </div>
+            </div>
+
+            {/* Removable */}
+            <div>
+              <h3 className="text-lg font-semibold mb-3">Removable Chips</h3>
+              <div className="flex flex-wrap gap-3 items-center justify-center">
+                <Chip removable onRemove={() => alert('Chip removed!')}>Removable</Chip>
+                <Chip variant="outline" removable onRemove={() => alert('Chip removed!')}>Outline Removable</Chip>
+                <Chip variant="plain" removable onRemove={() => alert('Chip removed!')}>Plain Removable</Chip>
+              </div>
+            </div>
           </div>
         </section>
       </main>
