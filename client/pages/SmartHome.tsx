@@ -166,7 +166,7 @@ export default function SmartHome() {
 
         {/* Action Buttons */}
         <div className="space-y-3 pb-4">
-          <Button variant="solid" size="large" className="w-full rounded-2xl h-14 shadow-lg">
+          <Button variant="solid" size="large" className="w-full h-14 shadow-lg">
             Button
           </Button>
           <Button variant="plain" size="large" className="w-full rounded-2xl h-14">
