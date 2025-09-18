@@ -129,12 +129,16 @@ export default function SmartHome() {
               </div>
             </div>
 
-            {/* Status Badges */}
+            {/* Status Chips */}
             <div className="flex items-center gap-4">
-              <Badge className="bg-[#E8FCE8] text-[#056121] border-0 px-3 py-1 rounded-full flex items-center gap-1">
-                <CheckCircle className="w-3 h-3" />
-                <span className="text-xs font-bold">5 Devices Online</span>
-              </Badge>
+              <Chip
+                variant="solid"
+                size="small"
+                className="bg-[#E8FCE8] text-[#056121] border-0"
+                leftElement={<CheckCircle className="w-3 h-3" />}
+              >
+                5 Devices Online
+              </Chip>
             </div>
           </CardContent>
         </Card>
@@ -156,9 +160,13 @@ export default function SmartHome() {
               {/* Device Details */}
               <div className="flex-1">
                 <h3 className="text-base font-bold text-[#3E4650] mb-2">Contact Sensor</h3>
-                <Badge className="bg-transparent border border-[#037766] text-[#037766] px-5 py-0 rounded-full">
-                  <span className="text-xs font-bold">Motion Detected</span>
-                </Badge>
+                <Chip
+                  variant="outline"
+                  size="small"
+                  className="bg-transparent border-[#037766] text-[#037766]"
+                >
+                  Motion Detected
+                </Chip>
               </div>
             </div>
           </CardContent>
